@@ -1,0 +1,16 @@
+--- # BEGIN
+
+# LOGAN CONFIGURATION FILE :: YAML syntax
+# Yaml editor: http://yaml-online-parser.appspot.com/
+
+logan:
+  options: null
+
+actions:
+
+  "create:file":
+    scope: create
+    context: null
+    path: /bin/cp
+
+... # EOF

@@ -1,0 +1,31 @@
+--- # BEGIN
+
+# LOGAN CONFIGURATION FILE :: YAML syntax
+# Yaml editor: http://yaml-online-parser.appspot.com/
+
+logan:
+  options: null
+
+actions:
+
+  "create:file":
+    scope: create
+    context: null
+    path: /usr/local/bin/cp
+    help: |
+            NAME
+            cp - copy files and directories
+
+            SYNOPSIS
+                   cp [OPTION] ... SOURCE DEST
+                   cp [OPTION] ... SOURCE DIRECTORY
+                   cp [OPTION] ... --target-directory=DIRECTORY SOURCE
+
+
+  "create:directory":
+    scope: create
+    context: null
+    path: /bin/cp
+    help: null
+
+... # EOF

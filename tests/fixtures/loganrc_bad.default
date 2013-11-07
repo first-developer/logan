@@ -1,0 +1,17 @@
+{
+    "commands" : [
+        {
+            scope : "create:file"
+        ,   path : "/bin/cp"
+        ,   help : "
+                NAME
+                cp - copy files and directories
+
+                SYNOPSIS
+                       cp [OPTION]... SOURCE DEST
+                       cp [OPTION]... SOURCE... DIRECTORY
+                       cp [OPTION]... --target-directory=DIRECTORY SOURCE...
+
+            "
+        }
+    ]
