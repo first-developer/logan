@@ -16,6 +16,7 @@ class Agent(object):
     LOGAN_DEFAULT_CONFIG_FILENAME      = "loganrc.default"
     LOGAN_DEFAULT_USER_CONFIG_FILENAME = "loganrc"
 
+    LOGAN_ACTION_PATTERN               = r'(\w+):(\w+):?(\w+)? ?(.*)'
 
     def __init__(self, logan_dir_path=None):
 
@@ -162,7 +163,7 @@ class Agent(object):
         return result
 
 
-    def is_action_valid(self):
+    def is_action_valid(self, command):
         """ Checks whether or not a given command is valid
 
             That is to say, it is related to a correct action
@@ -173,5 +174,28 @@ class Agent(object):
 
             Returns:
                 A boolean depending on whether or not the
-                command is valid 
+                command is valid
         """
+
+        import re
+
+        matchedCommand = re.match(self.LOGAN_ACTION_PATTERN, command)
+
+        try:
+            actionVerb      = matchedCommand.group(1)
+            actionObject    = matchedCommand.group(2)
+            actionContext   = matchedCommand.group(3)
+            actionParams    = matchedCommand.group(4)
+
+            # Note that the <context> is optional
+            isValid = bool(actionVerb and
+                    actionObject and
+                    actionParams)
+        except (AttributeError, IndexError) as e:
+            isValid = False
+            print "Agent.is_action_valid Error: ", e
+
+        return isValid
+
+
+

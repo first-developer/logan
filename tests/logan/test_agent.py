@@ -143,18 +143,21 @@ class TestAgent(TestCase):
         # Initialize the agent by changing the default config file location
         self.agent = Agent(self.LOGAN_ROOT)
 
-
+        # Testing that a simple good command passed
         isValid = self.agent.is_action_valid(self.LOGAN_TEST_COMMAND)
-        self.assertTrue(isValid)
+        self.assertTrue(isValid, "This simple command must be good")
 
+        # Testing that a right command with a specified context passed
         isValid = self.agent.is_action_valid(self.LOGAN_TEST_COMMAND_WITH_CTX)
-        self.assertTrue(isValid)
+        self.assertTrue(isValid, "This command with context must be good")
 
+        # Testing that an empty command or action failed
         isValid = self.agent.is_action_valid(self.LOGAN_TEST_EMPTY_COMMAND)
-        self.assertFalse(isValid)
+        self.assertFalse(isValid, "This empty command must be not valid")
 
+        # Testing that a bad formatted command or action failed
         isValid = self.agent.is_action_valid(self.LOGAN_TEST_BAD_COMMAND)
-        self.assertFalse(isValid)
+        self.assertFalse(isValid, "This bad command must be not valid")
 
 
 
