@@ -56,7 +56,7 @@
       <file leaf-file-name="test_agent.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="59" selection-start="5446" selection-end="5497" vertical-scroll-proportion="0.4489093" vertical-offset="1649" max-vertical-offset="2520">
+            <state line="123" column="16" selection-start="4724" selection-end="4724" vertical-scroll-proportion="0.19058554" vertical-offset="1649" max-vertical-offset="2520">
               <folding />
             </state>
           </provider>
@@ -654,7 +654,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="59" selection-start="5446" selection-end="5497" vertical-scroll-proportion="0.4489093" vertical-offset="1649" max-vertical-offset="2520">
+        <state line="123" column="16" selection-start="4724" selection-end="4724" vertical-scroll-proportion="0.19058554" vertical-offset="1649" max-vertical-offset="2520">
           <folding />
         </state>
       </provider>
