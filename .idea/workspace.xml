@@ -72,14 +72,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_action.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="test_action.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/logan/test_action.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="126" selection-end="136" vertical-scroll-proportion="0.11278196" vertical-offset="0" max-vertical-offset="665">
+            <state line="11" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
                 <marker date="1383874832000" expanded="true" signature="662:1349" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="665">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,6 +115,7 @@
         <option value="$PROJECT_DIR$/logan/agent.py" />
         <option value="$PROJECT_DIR$/logan/action.py" />
         <option value="$PROJECT_DIR$/tests/logan/test_action.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -205,6 +215,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imgs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -230,6 +258,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/imgs" />
       <recent name="D:\Utilisateurs\A555983\Playground\logan\tests\fixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -664,11 +693,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logan/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logan/agent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
@@ -767,11 +791,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/logan/test_action.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="126" selection-end="136" vertical-scroll-proportion="0.11278196" vertical-offset="0" max-vertical-offset="665">
+        <state line="11" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <folding>
             <element signature="e#0#34#0" expanded="true" />
             <marker date="1383874832000" expanded="true" signature="662:1349" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="665">
+          <folding />
         </state>
       </provider>
     </entry>
