@@ -1,6 +1,8 @@
 from unittest import TestCase
-from logan import *
-import  os.path
+from logan import Agent
+from logan import LoganConfigFileNotExistsError
+from logan import LoganLoadConfigError
+import os.path
 
 
 class TestAgent(TestCase):
@@ -45,7 +47,7 @@ class TestAgent(TestCase):
         """ Loads default config file path  and return a config object """
         self.agent = Agent()
 
-        self.assertRaises(LoganConfigFileNotExistsError, self.agent.get_default_config)
+        self.failUnlessRaises(LoganConfigFileNotExistsError, self.agent.get_default_config)
 
 
     def test_should_raise_when_the_config_file_is_not_well_formatted(self):
@@ -57,7 +59,7 @@ class TestAgent(TestCase):
         # Change the default config file path with the bad one
         self.agent.default_config_file_path = self.BAD_DEFAULT_CONFIG_FILEPATH
 
-        self.assertRaises(LoganLoadConfigError, self.agent.get_default_config)
+        self.failUnlessRaises(LoganLoadConfigError, self.agent.get_default_config)
 
 
     def test_should_return_default_configuration_when_requested(self):
@@ -128,12 +130,11 @@ class TestAgent(TestCase):
 
         # Make sure that the default option is different from user option
         self.assertNotEqual(default_create_file_action_options.get("path"),
-                            user_create_file_action_options.get("path"))
+                user_create_file_action_options.get("path"))
 
-        # Check
-        # if the path option of the self.LOGAN_TEST_ACTION has been overridden
+        # Checks if the path option of the self.LOGAN_TEST_ACTION has been overridden
         self.assertEqual(overridden_create_file_action_options.get("path"),
-                         user_create_file_action_options.get("path"))
+                user_create_file_action_options.get("path"))
 
 
     def test_validates_user_command_as_a_right_user_actions(self):
