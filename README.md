@@ -1,7 +1,7 @@
 
 
 # logan
-===
+
 
 <img align="center" width="300" src="docs/imgs/logan_logo.png" alt="Logan logo" title="Logan logo"/>
 
