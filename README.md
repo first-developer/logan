@@ -1,5 +1,4 @@
 
-
 # logan
 
 
@@ -9,4 +8,4 @@
 
 ## Overview
 
-**Logan** is a command line tool that wrapper command line with semantic clear command line interface 
+**Logan** is a command line tool that organizes your command line tools and makes them conisistent
