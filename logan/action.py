@@ -24,6 +24,7 @@ class Action(object):
                 ACTION_PARAMS as params
                 """)
 
+
     def set_attributes_from_command(self, command):
         """ Sets action attributes from the given command
 

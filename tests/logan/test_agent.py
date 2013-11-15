@@ -20,13 +20,6 @@ class TestAgent(TestCase):
         self.LOGAN_TEST_BAD_COMMAND      = "restart server wwinf9301"
 
 
-    # HELPERS
-    # =======
-
-    def setupLogan(self):
-        pass
-
-
     def test_initialize_logan_agent(self):
         """ Tests creation of a new Logan agent """
 
@@ -137,7 +130,7 @@ class TestAgent(TestCase):
                 user_create_file_action_options.get("path"))
 
 
-    def test_validates_user_command_as_a_right_user_actions(self):
+    def test_checks_action_command_syntax(self):
         """ Validates a command and user actions and make sure the syntax is correct
         """
 
@@ -145,20 +138,21 @@ class TestAgent(TestCase):
         self.agent = Agent(self.LOGAN_ROOT)
 
         # Testing that a simple good command passed
-        isValid = self.agent.is_action_valid(self.LOGAN_TEST_COMMAND)
+        isValid = self.agent.check_action_syntax(self.LOGAN_TEST_COMMAND)
         self.assertTrue(isValid, "This simple command must be good")
 
         # Testing that a right command with a specified context passed
-        isValid = self.agent.is_action_valid(self.LOGAN_TEST_COMMAND_WITH_CTX)
+        isValid = self.agent.check_action_syntax(self.LOGAN_TEST_COMMAND_WITH_CTX)
         self.assertTrue(isValid, "This command with context must be good")
 
         # Testing that an empty command or action failed
-        isValid = self.agent.is_action_valid(self.LOGAN_TEST_EMPTY_COMMAND)
+        isValid = self.agent.check_action_syntax(self.LOGAN_TEST_EMPTY_COMMAND)
         self.assertFalse(isValid, "This empty command must be not valid")
 
         # Testing that a bad formatted command or action failed
-        isValid = self.agent.is_action_valid(self.LOGAN_TEST_BAD_COMMAND)
+        isValid = self.agent.check_action_syntax(self.LOGAN_TEST_BAD_COMMAND)
         self.assertFalse(isValid, "This bad command must be not valid")
+
 
 
 
