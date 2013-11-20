@@ -22,13 +22,14 @@ class Agent(object):
     # Cache file path
     LOGAN_CACHE_KEY = 'logan.cache'
 
-
+    # ------------------------------------------------------------------------------
 
     def __init__(self, logan_dir_path=None):
 
         # Setting configuration file
         self.set_paths(logan_dir_path)
 
+    # ------------------------------------------------------------------------------
 
     def set_paths(self, dir_path):
         """ Set all paths used in Logan internals """
@@ -43,6 +44,7 @@ class Agent(object):
         # setting cache
         self.logan_cache_path = path.join(self.root_dir, self.LOGAN_CACHE_KEY)
 
+    # ------------------------------------------------------------------------------
 
     def load_default_config(self):
         """ Loads configuration from the default config file
@@ -73,7 +75,7 @@ class Agent(object):
 
         return default_config_file
 
-
+    # ------------------------------------------------------------------------------
 
     def get_config_from_filepath(self, file_path):
         """ Loads config python Dict from a given file_path
@@ -109,7 +111,7 @@ class Agent(object):
         else:
             raise LoganConfigFileNotExistsError("Agent.get_default_config() : Logan was not able to open the default config file")
 
-
+    # ------------------------------------------------------------------------------
 
     def load_user_config(self):
         """ Get user configuration
@@ -119,7 +121,7 @@ class Agent(object):
 
         return user_config
 
-
+    # ------------------------------------------------------------------------------
 
     def get_path(self, file_name=None):
 
@@ -136,7 +138,7 @@ class Agent(object):
 
         return path
 
-
+    # ------------------------------------------------------------------------------
 
     def load_config(self):
         """ Returns the final logan config, result of the merging of default and user config
@@ -166,6 +168,7 @@ class Agent(object):
 
         return config
 
+    # ------------------------------------------------------------------------------
 
     def dict_merge(self, a, b):
         """
@@ -189,6 +192,7 @@ class Agent(object):
                 result[k] = deepcopy(v)
         return result
 
+    # ------------------------------------------------------------------------------
 
     def check_action_syntax(self, action):
         """ Checks whether or not a given command is valid
@@ -206,6 +210,7 @@ class Agent(object):
 
         return bool( self.validates_action(action) )
 
+    # ------------------------------------------------------------------------------
 
     def raise_missing_attributes_error(self):
         """ Fires the error related to missing attributes case
@@ -219,6 +224,7 @@ class Agent(object):
                 ACTION_PARAMS as params
                 """)
 
+    # ------------------------------------------------------------------------------
 
     def get_actions_inputs_from_command(self, command):
         """ Get action inputs from the given command
@@ -248,6 +254,7 @@ class Agent(object):
         self.action_context = action_context
         self.action_params  = action_params
 
+    # ------------------------------------------------------------------------------
 
     def extract_action_inputs_from_command(self, command):
         """ Fetches all action attributes contains in the command
@@ -267,6 +274,7 @@ class Agent(object):
 
         return self.validates_action(command).groups(None)
 
+    # ------------------------------------------------------------------------------
 
     def validates_action(self, action):
         """ Checks whether or not a given action is valid.
@@ -291,6 +299,7 @@ class Agent(object):
 
         return valid_action
 
+    # ------------------------------------------------------------------------------
 
     def add_to_cache(self, config):
         """ Store the config object in cache to avoid reading from a file every time
@@ -315,6 +324,7 @@ class Agent(object):
 
         return cached
 
+    # ------------------------------------------------------------------------------
 
     def get_cache(self):
         """ Gets a cache instance
@@ -324,6 +334,7 @@ class Agent(object):
         """
         return shelve.open(self.logan_cache_path)
 
+    # ------------------------------------------------------------------------------
 
     def get_config_from_cache(self):
 
@@ -339,6 +350,7 @@ class Agent(object):
 
         return cached_config
 
+    # ------------------------------------------------------------------------------
 
     def check_cache(self, key):
         """ Checks whether or not it exist the given 'key'
@@ -363,6 +375,7 @@ class Agent(object):
 
         return is_present
 
+    # ------------------------------------------------------------------------------
 
     def find_action(self, key):
         """ Find the action with the given 'key' as an action key
@@ -382,3 +395,5 @@ class Agent(object):
 
         # Returns action related to this key
         return actions.get(key)
+
+    # ------------------------------------------------------------------------------
