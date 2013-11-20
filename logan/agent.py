@@ -2,7 +2,8 @@
 #    LOGAN AGENT
 # ==========================================================
 
-from os    import  path
+from os import  path
+import shelve
 from exceptions import  LoganConfigFileNotExistsError, \
                         LoganLoadConfigError, ActionAttributesMissingError
 from logan.action import Action
@@ -15,12 +16,18 @@ class Agent(object):
     LOGAN_DEFAULT_CONFIG_FILENAME      = "loganrc.default"
     LOGAN_DEFAULT_USER_CONFIG_FILENAME = "loganrc"
 
+    # the pattern that validates an action
+    LOGAN_ACTION_PATTERN   = r'(\w+):(\w+):?(\w+)? *(.*)'
+
+    # Cache file path
+    LOGAN_CACHE_KEY = 'logan.cache'
+
+
 
     def __init__(self, logan_dir_path=None):
 
         # Setting configuration file
         self.set_paths(logan_dir_path)
-
 
 
     def set_paths(self, dir_path):
@@ -33,9 +40,11 @@ class Agent(object):
         self.default_config_file_path   =  path.join(self.root_dir, self.LOGAN_DEFAULT_CONFIG_FILENAME)
         self.user_config_file_path      =  path.join(self.root_dir, self.LOGAN_DEFAULT_USER_CONFIG_FILENAME)
 
+        # setting cache
+        self.logan_cache_path = path.join(self.root_dir, self.LOGAN_CACHE_KEY)
 
 
-    def get_default_config(self):
+    def load_default_config(self):
         """ Loads configuration from the default config file
 
             This object represent the python object load from
@@ -102,7 +111,7 @@ class Agent(object):
 
 
 
-    def get_user_config(self):
+    def load_user_config(self):
         """ Get user configuration
         """
 
@@ -129,13 +138,27 @@ class Agent(object):
 
 
 
-    def get_config(self):
+    def load_config(self):
         """ Returns the final logan config, result of the merging of default and user config  """
 
-        default_config  = self.get_default_config()
-        user_config     = self.get_user_config()
+        # Try to retrieve config from cache
+        config = self.get_config_from_cache()
 
-        return self.dict_merge(default_config, user_config)
+        if not config:
+
+            default_config = self.load_default_config()
+            user_config    = self.load_user_config()
+
+            # Overrides the default config with user one
+            config = self.dict_merge(default_config, user_config)
+
+            # Save the config to the cache
+            cached = self.add_to_cache(config)
+
+            if not cached:
+                print "Failed to cache config file"
+
+        return config
 
 
     def dict_merge(self, a, b):
@@ -194,6 +217,10 @@ class Agent(object):
     def get_actions_inputs_from_command(self, command):
         """ Get action inputs from the given command
 
+            Args:
+                command: The given command from which we are trying
+                        to extract action inputs
+
             Raises:
                 ActionAttributesMissingError: An error occurred when there are missing
                                                 params for the action
@@ -202,7 +229,7 @@ class Agent(object):
 
         # Try to get action's attributes from command
         action_verb, action_object, action_context, action_params = \
-                self.get_action_inputs_from_command(command)
+                self.extract_action_inputs_from_command(command)
 
 
         # Check if the required attributes have been retrieved
@@ -216,7 +243,7 @@ class Agent(object):
         self.action_params  = action_params
 
 
-    def get_action_inputs_from_command(self, command):
+    def extract_action_inputs_from_command(self, command):
         """ Fetches all action attributes contains in the command
 
             It returns the result from the action validation process
@@ -235,11 +262,7 @@ class Agent(object):
         return self.validates_action(command).groups(None)
 
 
-    def get_attr(self, attr_name):
-        return self.__getattribute__("_action_" + attr_name)
-
-
-    def validates_action(action):
+    def validates_action(self, action):
         """ Checks whether or not a given action is valid.
 
             That is to say, this action matches the correct
@@ -258,12 +281,59 @@ class Agent(object):
         """
         import re
 
-        # the pattern that validates an action
-        LOGAN_ACTION_PATTERN   = r'(\w+):(\w+):?(\w+)? *(.*)'
-
-        valid_action = re.search(LOGAN_ACTION_PATTERN, action)
+        valid_action = re.search(self.LOGAN_ACTION_PATTERN, action)
 
         return valid_action
 
 
+    def add_to_cache(self, config):
+        """ Store the config object in cache to avoid reading from a file every time
 
+            Args:
+                config: the config object to save
+
+            Returns:
+                Boolean: Whether or not he saving process has succeeded
+        """
+
+        cache  = None
+        cached = True
+
+        try:
+            cache = shelve.open(self.logan_cache_path)
+            cache[self.LOGAN_CACHE_KEY] = config
+            cache.close()
+        except Exception as e:
+            print "Saving in cache failed"
+            cached = False
+
+        return cached
+
+
+    def get_config_from_cache(self):
+
+        cache         = None
+        cached_config = None
+
+        try:
+            cache = shelve.open(self.logan_cache_path)
+            cached_config = cache[self.LOGAN_CACHE_KEY]
+            cache.close()
+        except Exception as e:
+            print "Saving in cache failed"
+
+        return cached_config
+
+
+    def check_cache(self, key):
+
+        is_present = False
+
+        try:
+            cache = shelve.open(self.logan_cache_path)
+            is_present = cache.has_key(key)
+            cache.close()
+        except Exception as e:
+            print "Checking presence in cache failed"
+
+        return is_present
