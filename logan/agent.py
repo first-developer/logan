@@ -139,10 +139,16 @@ class Agent(object):
 
 
     def load_config(self):
-        """ Returns the final logan config, result of the merging of default and user config  """
+        """ Returns the final logan config, result of the merging of default and user config
+
+            It always return an empty Dict object not None!
+
+            Returns:
+                Dict derived from the logan configuration file
+        """
 
         # Try to retrieve config from cache
-        config = self.get_config_from_cache()
+        config = self.get_config_from_cache() or {}
 
         if not config:
 
@@ -150,7 +156,7 @@ class Agent(object):
             user_config    = self.load_user_config()
 
             # Overrides the default config with user one
-            config = self.dict_merge(default_config, user_config)
+            config = self.dict_merge(default_config, user_config) or {}
 
             # Save the config to the cache
             cached = self.add_to_cache(config)
@@ -300,7 +306,7 @@ class Agent(object):
         cached = True
 
         try:
-            cache = shelve.open(self.logan_cache_path)
+            cache = self.get_cache()
             cache[self.LOGAN_CACHE_KEY] = config
             cache.close()
         except Exception as e:
@@ -310,13 +316,22 @@ class Agent(object):
         return cached
 
 
+    def get_cache(self):
+        """ Gets a cache instance
+
+            Returns:
+                A cache object
+        """
+        return shelve.open(self.logan_cache_path)
+
+
     def get_config_from_cache(self):
 
         cache         = None
         cached_config = None
 
         try:
-            cache = shelve.open(self.logan_cache_path)
+            cache = self.get_cache()
             cached_config = cache[self.LOGAN_CACHE_KEY]
             cache.close()
         except Exception as e:
@@ -326,14 +341,44 @@ class Agent(object):
 
 
     def check_cache(self, key):
+        """ Checks whether or not it exist the given 'key'
+            in the cache as a object key
+
+             Args:
+                key: The one we want to check the presence
+
+            Returns:
+                Boolean related to the presence state of this 'key'
+
+        """
 
         is_present = False
 
         try:
-            cache = shelve.open(self.logan_cache_path)
+            cache = self.get_cache()
             is_present = cache.has_key(key)
             cache.close()
         except Exception as e:
             print "Checking presence in cache failed"
 
         return is_present
+
+
+    def find_action(self, key):
+        """ Find the action with the given 'key' as an action key
+
+            Args:
+                key: A given action key
+
+            Returns:
+                Dict containing all information about the action
+                that as the given 'key' as an action key
+        """
+
+        action_found = None
+
+        config  = self.load_config()
+        actions = config.get("actions")
+
+        # Returns action related to this key
+        return actions.get(key)

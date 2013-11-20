@@ -16,6 +16,7 @@ class TestAgent(TestCase):
         self.USER_CONFIG_FILEPATH        = os.path.join(self.LOGAN_ROOT, "loganrc")
 
         self.LOGAN_TEST_ACTION           = "create:file"
+        self.LOGAN_TEST_MISSING_ACTION   = "create:server"
         self.LOGAN_TEST_COMMAND          = "create:file filename.txt"
         self.LOGAN_TEST_COMMAND_WITH_CTX = "goto:server:aws windrs04"
         self.LOGAN_TEST_EMPTY_COMMAND    = ":: anything"
@@ -23,12 +24,15 @@ class TestAgent(TestCase):
 
         self.LOGAN_CACHE_KEY             = "logan.cache"
 
+    # ------------------------------------------------------------------------------
+
     def test_initialize_logan_agent(self):
         """ Tests creation of a new Logan agent """
 
         self.agent = Agent()
         self.assertIsInstance(self.agent, Agent, "This is not a logan Agent.")
 
+    # ------------------------------------------------------------------------------
 
     def test_initialize_logan_agent_with_config_file_path(self):
         """ Tests creation of a new Logan agent by providing a config file path"""
@@ -38,6 +42,7 @@ class TestAgent(TestCase):
         self.assertEqual(self.agent.default_config_file_path, self.DEFAULT_CONFIG_FILEPATH)
         self.assertEqual(self.agent.user_config_file_path,    self.USER_CONFIG_FILEPATH)
 
+    # ------------------------------------------------------------------------------
 
     def test_should_raise_when_the_default_config_file_doesnt_exist(self):
         """ Loads default config file path  and return a config object """
@@ -45,6 +50,7 @@ class TestAgent(TestCase):
 
         self.failUnlessRaises(LoganConfigFileNotExistsError, self.agent.load_default_config)
 
+    # ------------------------------------------------------------------------------
 
     def test_should_raise_when_the_config_file_is_not_well_formatted(self):
         """ Loads default config object """
@@ -57,6 +63,7 @@ class TestAgent(TestCase):
 
         self.failUnlessRaises(LoganLoadConfigError, self.agent.load_default_config)
 
+    # ------------------------------------------------------------------------------
 
     def test_should_return_default_configuration_when_requested(self):
         """ Loads default config object """
@@ -69,6 +76,7 @@ class TestAgent(TestCase):
 
         self.assertIsNotNone(default_config, "Failed to load the default configuration")
 
+    # ------------------------------------------------------------------------------
 
     def test_should_contains_at_least_one_default_command(self):
         """ Checks if the excerpt config is in the default configuration file """
@@ -81,6 +89,7 @@ class TestAgent(TestCase):
 
         self.assertIsNotNone(default_config.get("actions").get(self.LOGAN_TEST_ACTION))
 
+    # ------------------------------------------------------------------------------
 
     def test_should_returns_user_configuration(self):
         """ Loads user configuration """
@@ -92,6 +101,7 @@ class TestAgent(TestCase):
 
         self.assertIsNotNone(user_config, "Failed to load the user configuration")
 
+    # ------------------------------------------------------------------------------
 
     def test_return_the_right_path_depending_on_the_logan_specific_filename(self):
         """ Return the path for every logan specific filename """
@@ -106,6 +116,7 @@ class TestAgent(TestCase):
         self.assertEqual(agent.get_path("loganrc"),
                          self.USER_CONFIG_FILEPATH, "loganrc file not found")
 
+    # ------------------------------------------------------------------------------
 
     def test_user_config_should_override_default_configuration(self):
         """ Override default configuration with user configuration """
@@ -132,6 +143,7 @@ class TestAgent(TestCase):
         self.assertEqual(overridden_create_file_action_options.get("path"),
                 user_create_file_action_options.get("path"))
 
+    # ------------------------------------------------------------------------------
 
     def test_checks_actions_syntax(self):
         """ Validates a command and user actions and make sure the syntax is correct
@@ -156,6 +168,7 @@ class TestAgent(TestCase):
         syntax_ok = self.agent.check_action_syntax(self.LOGAN_TEST_BAD_COMMAND)
         self.assertFalse(syntax_ok, "This bad command must be not valid")
 
+    # ------------------------------------------------------------------------------
 
     def test_extract_action_inputs_from_user_command(self):
         """ Retrieves actions inputs from command enter by the user
@@ -174,6 +187,7 @@ class TestAgent(TestCase):
         self.assertIsNotNone(action_inputs,
                              "No action inputs found from the command '%s'" % self.LOGAN_TEST_COMMAND )
 
+    # ------------------------------------------------------------------------------
 
     def test_should_be_able_to_save_config_object_in_cache(self):
         """ Checks whether the config object exist in cache
@@ -190,6 +204,7 @@ class TestAgent(TestCase):
 
         self.assertTrue(saved, "Failed to saved the config object")
 
+    # ------------------------------------------------------------------------------
 
     def test_should_be_able_to_get_config_object_from_cache(self):
         """ Get the config object from cache
@@ -203,6 +218,7 @@ class TestAgent(TestCase):
 
         self.assertIsNotNone(config, "Failed to get the cached config object")
 
+    # ------------------------------------------------------------------------------
 
     def test_check_the_presence_of_the_config_in_cache(self):
         """ Checks if the config is store in the cache
@@ -215,6 +231,7 @@ class TestAgent(TestCase):
 
         self.assertTrue(checked, "Actions config object isn't in the cache")
 
+    # ------------------------------------------------------------------------------
 
     def test_should_be_able_to_found_action_from_key(self):
         """ Test find an action by providing its key name
@@ -223,4 +240,8 @@ class TestAgent(TestCase):
         # Initialize the agent by changing the default config file location
         self.agent = Agent(self.LOGAN_ROOT)
 
-        action = self.agent.find_action(self.LOGAN_TEST_ACTION)
+        action         = self.agent.find_action(self.LOGAN_TEST_ACTION)
+        missing_action = self.agent.find_action(self.LOGAN_TEST_MISSING_ACTION)
+
+        self.assertIsNotNone(action,         "Action [%s] not found!" % self.LOGAN_TEST_ACTION)
+        self.assertIsNone   (missing_action, "Action [%s] found!"     % self.LOGAN_TEST_MISSING_ACTION)
