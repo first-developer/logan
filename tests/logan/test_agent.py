@@ -16,8 +16,11 @@ class TestAgent(TestCase):
         self.USER_CONFIG_FILEPATH        = os.path.join(self.LOGAN_ROOT, "loganrc")
 
         self.LOGAN_TEST_ACTION           = "create:file"
+        self.LOGAN_TEST_RIGHT_ACTION     = "list:files"
         self.LOGAN_TEST_MISSING_ACTION   = "create:server"
         self.LOGAN_TEST_COMMAND          = "create:file filename.txt"
+        self.LOGAN_TEST_FAKE_COMMAND     = "create:file filename.txt"
+        self.LOGAN_TEST_RIGHT_COMMAND    = "list:files:usr -ltr"
         self.LOGAN_TEST_COMMAND_WITH_CTX = "goto:server:aws windrs04"
         self.LOGAN_TEST_EMPTY_COMMAND    = ":: anything"
         self.LOGAN_TEST_BAD_COMMAND      = "restart server wwinf9301"
@@ -45,7 +48,7 @@ class TestAgent(TestCase):
         agent = Agent(self.LOGAN_ROOT)
 
         # Gets user command inputs
-        agent.get_actions_inputs_from_command(self.LOGAN_TEST_COMMAND)
+        agent.get_actions_inputs_from_command(command)
 
         return agent
 
@@ -295,3 +298,29 @@ class TestAgent(TestCase):
         out = self.agent.performs(action)
 
         self.assertIsNotNone(out, "Nothing was performed on the action [%s]" % self.LOGAN_TEST_ACTION)
+
+    # ------------------------------------------------------------------------------
+
+    def test_must_return_valid_or_wrong_return_code_whether_the_command_is_correct_or_not(self):
+        """ Checks return code for a good and bad command
+        """
+
+        # TODO: Build only one agent a make it run more than only one command
+        # Build 2 agents to run two different commands
+        self.fake_agent  = self.build_agent_with_command(self.LOGAN_TEST_FAKE_COMMAND)
+        self.right_agent = self.build_agent_with_command(self.LOGAN_TEST_RIGHT_COMMAND)
+
+        # Found 2 related actions
+        fake_action  = self.fake_agent .find_action(self.LOGAN_TEST_ACTION)
+        right_action = self.right_agent.find_action(self.LOGAN_TEST_RIGHT_ACTION)
+
+        # Gets outputs
+        fake_out  = self.fake_agent .performs(fake_action)
+        right_out = self.right_agent.performs(right_action)
+
+        # Checks both return codes
+        self.assertEqual(fake_out .get("code"), 1, "Command must failed when executed")
+        self.assertEqual(right_out.get("code"), 0, "Command succeed when executed")
+
+
+

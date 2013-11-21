@@ -438,7 +438,7 @@ class Agent(object):
 
         command = self.build_command_from_action(action)
 
-        process = subprocess.Popen(command, shell=False)
+        process = subprocess.Popen(command, shell=False, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
 
         out, err = process.communicate()
 

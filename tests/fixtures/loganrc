@@ -22,10 +22,10 @@ actions:
                    ls [OPTION] ... --target-directory=DIRECTORY SOURCE
 
 
-  "create:directory":
-    scope: create
-    context: null
-    path: /bin/cp
+  "list:files":
+    scope: list
+    context: usr
+    path: local/bin/ls
     help: null
 
 ... # EOF
