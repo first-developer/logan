@@ -24,6 +24,31 @@ class TestAgent(TestCase):
 
         self.LOGAN_CACHE_KEY             = "logan.cache"
 
+    def tearDown(self):
+
+
+        # Try to remove cache file if exist
+        # The file is named : logan.cache.db
+        try:
+            os.remove(self.agent.logan_cache_path + ".db")
+        except:
+            pass
+
+
+    # ------------------------------------------------------------------------------
+
+    def build_agent_with_command(self, command):
+        """ Creates a new agent and get user inputs from the given comamnd
+        """
+
+        # Initialize the agent by changing the default config file location
+        agent = Agent(self.LOGAN_ROOT)
+
+        # Gets user command inputs
+        agent.get_actions_inputs_from_command(self.LOGAN_TEST_COMMAND)
+
+        return agent
+
     # ------------------------------------------------------------------------------
 
     def test_initialize_logan_agent(self):
@@ -213,6 +238,12 @@ class TestAgent(TestCase):
         # Initialize the agent by changing the default config file location
         self.agent = Agent(self.LOGAN_ROOT)
 
+         # Get the config object to save
+        config = self.agent.load_config()
+
+        # Try to save the config object in the cache
+        saved = self.agent.add_to_cache(config)
+
         # Get the config object to save
         config = self.agent.get_config_from_cache()
 
@@ -220,7 +251,7 @@ class TestAgent(TestCase):
 
     # ------------------------------------------------------------------------------
 
-    def test_check_the_presence_of_the_config_in_cache(self):
+    def test_config_not_present_in_cache_the_first_time(self):
         """ Checks if the config is store in the cache
         """
 
@@ -229,19 +260,38 @@ class TestAgent(TestCase):
 
         checked = self.agent.check_cache(self.LOGAN_CACHE_KEY)
 
-        self.assertTrue(checked, "Actions config object isn't in the cache")
+        # The first time the config won't be present in the cache
+        self.assertFalse(checked, "Actions config object isn't in the cache")
+
+
 
     # ------------------------------------------------------------------------------
 
-    def test_should_be_able_to_found_action_from_key(self):
+    def test_should_found_action_from_key(self):
         """ Test find an action by providing its key name
         """
 
-        # Initialize the agent by changing the default config file location
-        self.agent = Agent(self.LOGAN_ROOT)
+        # Build an agent
+        self.agent = self.build_agent_with_command(self.LOGAN_TEST_COMMAND)
 
         action         = self.agent.find_action(self.LOGAN_TEST_ACTION)
         missing_action = self.agent.find_action(self.LOGAN_TEST_MISSING_ACTION)
 
         self.assertIsNotNone(action,         "Action [%s] not found!" % self.LOGAN_TEST_ACTION)
         self.assertIsNone   (missing_action, "Action [%s] found!"     % self.LOGAN_TEST_MISSING_ACTION)
+
+    # ------------------------------------------------------------------------------
+
+    def test_should_perform_actions(self):
+        """ Tests the ability of the logan agent to perform an action
+        """
+
+        # Build an agent
+        self.agent = self.build_agent_with_command(self.LOGAN_TEST_COMMAND)
+
+        # Find the action to run
+        action = self.agent.find_action(self.LOGAN_TEST_ACTION)
+
+        out = self.agent.performs(action)
+
+        self.assertIsNotNone(out, "Nothing was performed on the action [%s]" % self.LOGAN_TEST_ACTION)

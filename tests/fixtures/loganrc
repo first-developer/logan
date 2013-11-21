@@ -11,15 +11,15 @@ actions:
   "create:file":
     scope: create
     context: null
-    path: /usr/local/bin/cp
+    path: usr/local/bin/ls
     help: |
             NAME
-            cp - copy files and directories
+            ls - copy files and directories
 
             SYNOPSIS
-                   cp [OPTION] ... SOURCE DEST
-                   cp [OPTION] ... SOURCE DIRECTORY
-                   cp [OPTION] ... --target-directory=DIRECTORY SOURCE
+                   ls [OPTION] ... SOURCE DEST
+                   ls [OPTION] ... SOURCE DIRECTORY
+                   ls [OPTION] ... --target-directory=DIRECTORY SOURCE
 
 
   "create:directory":

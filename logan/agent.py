@@ -5,8 +5,9 @@
 from os import  path
 import shelve
 from exceptions import  LoganConfigFileNotExistsError, \
-                        LoganLoadConfigError, ActionAttributesMissingError
-from logan.action import Action
+                        LoganLoadConfigError, \
+                        LoganActionAttrsMissingError,\
+                        LoganActionPathMissingError
 
 
 class Agent(object):
@@ -15,6 +16,7 @@ class Agent(object):
     LOGAN_DEFAULT_ROOT_DIR             = path.join(path.expanduser("~"), ".logan")
     LOGAN_DEFAULT_CONFIG_FILENAME      = "loganrc.default"
     LOGAN_DEFAULT_USER_CONFIG_FILENAME = "loganrc"
+    LOGAN_DEFAULT_ACTIONS_DIR_NAME     = "actions"
 
     # the pattern that validates an action
     LOGAN_ACTION_PATTERN   = r'(\w+):(\w+):?(\w+)? *(.*)'
@@ -38,11 +40,14 @@ class Agent(object):
         self.root_dir = dir_path if dir_path else self.LOGAN_DEFAULT_ROOT_DIR
 
         # setting the config file path
-        self.default_config_file_path   =  path.join(self.root_dir, self.LOGAN_DEFAULT_CONFIG_FILENAME)
-        self.user_config_file_path      =  path.join(self.root_dir, self.LOGAN_DEFAULT_USER_CONFIG_FILENAME)
+        self.default_config_file_path   = path.join(self.root_dir, self.LOGAN_DEFAULT_CONFIG_FILENAME)
+        self.user_config_file_path      = path.join(self.root_dir, self.LOGAN_DEFAULT_USER_CONFIG_FILENAME)
 
-        # setting cache
-        self.logan_cache_path = path.join(self.root_dir, self.LOGAN_CACHE_KEY)
+        # setting cache path
+        self.logan_cache_path           = path.join(self.root_dir, self.LOGAN_CACHE_KEY)
+
+        # Setting actions path
+        self.logan_actions_path         = path.join(self.root_dir, self.LOGAN_DEFAULT_ACTIONS_DIR_NAME)
 
     # ------------------------------------------------------------------------------
 
@@ -219,7 +224,7 @@ class Agent(object):
                 ActionAttributesMissingError: An error occurred when there are missing
                                                 params for the action
         """
-        raise ActionAttributesMissingError("""Attributes needed!
+        raise LoganActionAttrsMissingError("""Attributes needed!
                 You must provides ACTION_VERB, ACTION_OBJECT, ACTION_CONTEXT,
                 ACTION_PARAMS as params
                 """)
@@ -380,6 +385,9 @@ class Agent(object):
     def find_action(self, key):
         """ Find the action with the given 'key' as an action key
 
+            It also checks that the action found for the given 'key'
+            has the same context as the one inside the configuration
+
             Args:
                 key: A given action key
 
@@ -388,12 +396,89 @@ class Agent(object):
                 that as the given 'key' as an action key
         """
 
-        action_found = None
-
         config  = self.load_config()
         actions = config.get("actions")
 
-        # Returns action related to this key
-        return actions.get(key)
+        action_found = actions.get(key)
+
+        # Check if the action found has the same context of the one in the configuration
+        if action_found and (action_found.get("context") != self.action_context):
+            return
+
+
+        return action_found
 
     # ------------------------------------------------------------------------------
+
+    def performs(self, action):
+        """ Executes command related to the given action
+
+            Args:
+                action: Dict gathering all action attributes useful to
+                        run the command related to it.
+
+                        The Dict looks like this :
+                        action = {
+                            "scope": "create"
+                            "context": "null"
+                            "path": "/bin/cp"
+                        }
+
+            Returns:
+                Dict as the result of action performing. It is structure
+                like this:
+                output = {
+                    "out" : "...",
+                    "err" : "...",
+                    "code": 0/1
+                }
+        """
+
+        import subprocess
+
+        command = self.build_command_from_action(action)
+
+        process = subprocess.Popen(command, shell=False)
+
+        out, err = process.communicate()
+
+        return {
+            "out" : out,
+            "err" : err,
+            "code": process.returncode
+        }
+
+
+
+    # TODO: write test for this method
+    def build_command_from_action(self, action):
+        """ Build the process command that will be executed.
+
+            It also used
+
+            Args:
+                action: Use this Dict to get access to action attributes
+
+            Returns:
+                Tuple as [command, options_and_params]
+                Ex: ["ls", "-ltr dr*"]
+        """
+
+        context_path     = action.get("context") or ""
+        action_file_path = action.get("path")    or ""
+
+        action_path = path.join(self.logan_actions_path,
+                                context_path,
+                                action_file_path)
+
+        # Checks if the action path is correct file
+        if not path.isfile(action_path):
+            print "Agent.build_command_from_action : checks the action path : %s" % action_path
+            raise LoganActionPathMissingError("Logan action path [%s] not found" % action_path)
+
+        return [
+            action_path,
+            self.action_params
+        ]
+
+
