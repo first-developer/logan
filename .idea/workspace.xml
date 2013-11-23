@@ -26,7 +26,7 @@
       <file leaf-file-name="agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logan/agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="440" column="103" selection-start="14554" selection-end="14554" vertical-scroll-proportion="0.0" vertical-offset="6281" max-vertical-offset="7350">
+            <state line="35" column="0" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="8430">
               <folding>
                 <element signature="e#140#160#0" expanded="true" />
               </folding>
@@ -34,19 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pydevd.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1487" column="32" selection-start="59283" selection-end="59283" vertical-scroll-proportion="0.0" vertical-offset="21062" max-vertical-offset="21570">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logan/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="26" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
+            <state line="7" column="26" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
               <folding />
             </state>
           </provider>
@@ -66,7 +57,7 @@
       <file leaf-file-name="test_agent.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="73" selection-start="12396" selection-end="12477" vertical-scroll-proportion="0.1437008" vertical-offset="4412" max-vertical-offset="4920">
+            <state line="362" column="48" selection-start="15074" selection-end="15114" vertical-scroll-proportion="0.28" vertical-offset="5300" max-vertical-offset="5790">
               <folding />
             </state>
           </provider>
@@ -117,10 +108,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1680" />
-    <option name="y" value="-228" />
-    <option name="width" value="1680" />
-    <option name="height" value="1028" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="749" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -286,7 +276,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/logan" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
@@ -673,23 +663,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1680" y="-228" width="1680" height="1028" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="749" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22770701" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09293905" sideWeight="0.59030837" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40969163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12251392" sideWeight="0.4419714" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42658094" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.55802864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2290749" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -727,7 +717,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="80" />
+      <option name="time" value="99" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -799,13 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logan/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/fixtures/loganrc.default">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="17" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
@@ -827,9 +810,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logan/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/logan/agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="440" column="103" selection-start="14554" selection-end="14554" vertical-scroll-proportion="0.0" vertical-offset="6281" max-vertical-offset="7350">
+        <state line="35" column="0" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="8430">
           <folding>
             <element signature="e#140#160#0" expanded="true" />
           </folding>
@@ -838,7 +828,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="73" selection-start="12396" selection-end="12477" vertical-scroll-proportion="0.1437008" vertical-offset="4412" max-vertical-offset="4920">
+        <state line="362" column="48" selection-start="15074" selection-end="15114" vertical-scroll-proportion="0.28" vertical-offset="5300" max-vertical-offset="5790">
           <folding />
         </state>
       </provider>

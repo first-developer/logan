@@ -8,7 +8,7 @@ from exceptions import  LoganConfigFileNotExistsError, \
                         LoganLoadConfigError, \
                         LoganActionAttrsMissingError,\
                         LoganActionPathMissingError
-
+import say
 
 class Agent(object):
 
@@ -23,6 +23,22 @@ class Agent(object):
 
     # Cache file path
     LOGAN_CACHE_KEY = 'logan.cache'
+
+    # Output template
+    LOGAN_OUTPUT_TEMPLATE = """
+
+\033[1;30mAction\t:\033[0;30m \033[1;36m{} \033[0;30m
+
+\033[1;30mRetcode\t:\033[0;30m {}
+
+\033[1;30mErrors\t: \033[0;30m
+\033[0;31m
+{}\033[0;30m
+\033[1;30mOutput\t:\033[0;30m
+\033[0;32m
+{}
+\033[0;30m
+"""
 
     # ------------------------------------------------------------------------------
 
@@ -199,7 +215,7 @@ class Agent(object):
 
     # ------------------------------------------------------------------------------
 
-    def check_action_syntax(self, action):
+    def check_action_command_syntax(self, command):
         """ Checks whether or not a given command is valid
 
             That is to say, it is related to a correct action
@@ -213,7 +229,7 @@ class Agent(object):
                 command is valid
         """
 
-        return bool( self.validates_action(action) )
+        return bool( self.validates_action_command(command) )
 
     # ------------------------------------------------------------------------------
 
@@ -254,6 +270,7 @@ class Agent(object):
             self.raise_missing_attributes_error()
 
         # Setting action attributes
+        self.command        = command
         self.action_verb    = action_verb
         self.action_object  = action_object
         self.action_context = action_context
@@ -277,11 +294,11 @@ class Agent(object):
                 @see validates_action
         """
 
-        return self.validates_action(command).groups(None)
+        return self.validates_action_command(command).groups(None)
 
     # ------------------------------------------------------------------------------
 
-    def validates_action(self, action):
+    def validates_action_command(self, action):
         """ Checks whether or not a given action is valid.
 
             That is to say, this action matches the correct
@@ -382,7 +399,7 @@ class Agent(object):
 
     # ------------------------------------------------------------------------------
 
-    def find_action(self, key):
+    def find_action_by_key(self, key=None):
         """ Find the action with the given 'key' as an action key
 
             It also checks that the action found for the given 'key'
@@ -407,6 +424,16 @@ class Agent(object):
 
 
         return action_found
+
+    # ------------------------------------------------------------------------------
+
+    def find_action(self):
+        """ Gets the action that the user wants to perform
+        """
+
+        user_action = "{}:{}".format(self.action_verb, self.action_object)
+
+        return self.find_action_by_key(user_action)
 
     # ------------------------------------------------------------------------------
 
@@ -448,7 +475,7 @@ class Agent(object):
             "code": process.returncode
         }
 
-
+    # ------------------------------------------------------------------------------
 
     # TODO: write test for this method
     def build_command_from_action(self, action):
@@ -480,5 +507,50 @@ class Agent(object):
             action_path,
             self.action_params
         ]
+
+    # ------------------------------------------------------------------------------
+
+    def show_output(self):
+        """ Show result from command execution
+        """
+
+        action_cmd  = self.command
+        output      = self.output.get("out")
+        errors      = self.output.get("err")
+        return_code = self.output.get("code")
+
+        print self.LOGAN_OUTPUT_TEMPLATE.format(action_cmd, return_code, errors, output)
+
+    # ------------------------------------------------------------------------------
+
+    def process(self, command):
+        """ Executes the command entered by the user
+        """
+
+        # 1. Check command syntax
+        syntax_ok = self.check_action_command_syntax(command)
+
+        if syntax_ok:
+
+            # 2.1 Extract action inputs from command
+            self.get_actions_inputs_from_command(command)
+
+            # 2.2 Load config
+            cached_config = self.load_config()
+
+            # 3. Find the action to perform
+            action = self.find_action()
+
+            # 4. Perform action
+            self.output = self.performs(action)
+
+            # 5. show output
+            self.show_output()
+
+        else:
+            # TODO: Writes 'Show_help' method
+            print "Wrong syntax : Unable to run the command"
+            pass
+
 
 

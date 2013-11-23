@@ -27,6 +27,10 @@ class TestAgent(TestCase):
 
         self.LOGAN_CACHE_KEY             = "logan.cache"
 
+        self.SUCCESS_CODE = 0
+        self.FAILURE_CODE = 1
+        self.NO_OUTPUT    = ""
+
     def tearDown(self):
 
 
@@ -181,19 +185,19 @@ class TestAgent(TestCase):
         self.agent = Agent(self.LOGAN_ROOT)
 
         # Testing that a simple good command passed
-        syntax_ok = self.agent.check_action_syntax(self.LOGAN_TEST_COMMAND)
+        syntax_ok = self.agent.check_action_command_syntax(self.LOGAN_TEST_COMMAND)
         self.assertTrue(syntax_ok, "This simple command must be good")
 
         # Testing that a right command with a specified context passed
-        syntax_ok = self.agent.check_action_syntax(self.LOGAN_TEST_COMMAND_WITH_CTX)
+        syntax_ok = self.agent.check_action_command_syntax(self.LOGAN_TEST_COMMAND_WITH_CTX)
         self.assertTrue(syntax_ok, "This command with context must be good")
 
         # Testing that an empty command or action failed
-        syntax_ok = self.agent.check_action_syntax(self.LOGAN_TEST_EMPTY_COMMAND)
+        syntax_ok = self.agent.check_action_command_syntax(self.LOGAN_TEST_EMPTY_COMMAND)
         self.assertFalse(syntax_ok, "This empty command must be not valid")
 
         # Testing that a bad formatted command or action failed
-        syntax_ok = self.agent.check_action_syntax(self.LOGAN_TEST_BAD_COMMAND)
+        syntax_ok = self.agent.check_action_command_syntax(self.LOGAN_TEST_BAD_COMMAND)
         self.assertFalse(syntax_ok, "This bad command must be not valid")
 
     # ------------------------------------------------------------------------------
@@ -277,8 +281,8 @@ class TestAgent(TestCase):
         # Build an agent
         self.agent = self.build_agent_with_command(self.LOGAN_TEST_COMMAND)
 
-        action         = self.agent.find_action(self.LOGAN_TEST_ACTION)
-        missing_action = self.agent.find_action(self.LOGAN_TEST_MISSING_ACTION)
+        action         = self.agent.find_action_by_key(self.LOGAN_TEST_ACTION)
+        missing_action = self.agent.find_action_by_key(self.LOGAN_TEST_MISSING_ACTION)
 
         self.assertIsNotNone(action,         "Action [%s] not found!" % self.LOGAN_TEST_ACTION)
         self.assertIsNone   (missing_action, "Action [%s] found!"     % self.LOGAN_TEST_MISSING_ACTION)
@@ -293,7 +297,7 @@ class TestAgent(TestCase):
         self.agent = self.build_agent_with_command(self.LOGAN_TEST_COMMAND)
 
         # Find the action to run
-        action = self.agent.find_action(self.LOGAN_TEST_ACTION)
+        action = self.agent.find_action_by_key(self.LOGAN_TEST_ACTION)
 
         out = self.agent.performs(action)
 
@@ -311,16 +315,70 @@ class TestAgent(TestCase):
         self.right_agent = self.build_agent_with_command(self.LOGAN_TEST_RIGHT_COMMAND)
 
         # Found 2 related actions
-        fake_action  = self.fake_agent .find_action(self.LOGAN_TEST_ACTION)
-        right_action = self.right_agent.find_action(self.LOGAN_TEST_RIGHT_ACTION)
+        fake_action  = self.fake_agent .find_action_by_key(self.LOGAN_TEST_ACTION)
+        right_action = self.right_agent.find_action_by_key(self.LOGAN_TEST_RIGHT_ACTION)
 
         # Gets outputs
         fake_out  = self.fake_agent .performs(fake_action)
         right_out = self.right_agent.performs(right_action)
 
         # Checks both return codes
-        self.assertEqual(fake_out .get("code"), 1, "Command must failed when executed")
-        self.assertEqual(right_out.get("code"), 0, "Command succeed when executed")
+        self.assertEqual(fake_out .get("code"), self.FAILURE_CODE, "Command must failed when executed")
+        self.assertEqual(right_out.get("code"), self.SUCCESS_CODE, "Command succeed when executed")
+
+    # ------------------------------------------------------------------------------
+
+    def test_must_show_output_after_command_execution(self):
+        """ Makes sure that the command return something as an output
+            even if is an error :p
+        """
+
+        self.fake_agent  = self.build_agent_with_command(self.LOGAN_TEST_FAKE_COMMAND)
+        self.right_agent = self.build_agent_with_command(self.LOGAN_TEST_RIGHT_COMMAND)
+
+        # Found 2 related actions
+        fake_action  = self.fake_agent .find_action_by_key(self.LOGAN_TEST_ACTION)
+        right_action = self.right_agent.find_action_by_key(self.LOGAN_TEST_RIGHT_ACTION)
+
+        # Gets outputs
+        fake_out  = self.fake_agent .performs(fake_action)
+        right_out = self.right_agent.performs(right_action)
+
+        # Checks both return output and errors
+        self.assertEqual(fake_out .get("out"),
+                         self.NO_OUTPUT,
+                         "Command must failed when executed")
+        self.assertEqual(fake_out .get("err"),
+                         'ls: filename.txt: No such file or directory\n',
+                         "Command must failed when executed")
+
+        self.assertIn("test_agent.py",
+                      right_out.get("out").split(),
+                      "Command succeed when executed")
+        self.assertEqual(right_out.get("err"),
+                         self.NO_OUTPUT,
+                         "Command succeed when executed")
+
+
+    def test_should_be_able_to_process_a_command(self):
+        """ Tests the complete process of execution a user command
+        """
+
+        self.agent = Agent(self.LOGAN_ROOT)
+
+        self.agent.process(self.LOGAN_TEST_RIGHT_COMMAND)
+
+        output = self.agent.output
+
+        self.assertIn("test_agent.py",
+                      output.get("out").split(),
+                      "Command succeed when executed")
+        self.assertEqual(output.get("err"),
+                         self.NO_OUTPUT,
+                         "Command succeed when executed")
+        self.assertEqual(output.get("code"),
+                         self.SUCCESS_CODE,
+                         "Command must failed when executed")
 
 
 
