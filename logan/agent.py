@@ -98,6 +98,15 @@ class Agent(object):
 
     # ------------------------------------------------------------------------------
 
+    @classmethod
+    def load_config_file(cls, file_path):
+        """ Alias to allow reading config file from outside
+        """
+
+        return cls.get_config_from_filepath(file_path)
+
+    # ------------------------------------------------------------------------------
+
     def get_config_from_filepath(self, file_path):
         """ Loads config python Dict from a given file_path
 
@@ -114,8 +123,7 @@ class Agent(object):
         from yaml   import load
         from yaml   import YAMLError
 
-        config_file = None
-        config      = None
+        config = None
 
         # Check if the file exist before trying to read it
         if path.exists(file_path):

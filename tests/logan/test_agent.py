@@ -349,7 +349,7 @@ class TestAgent(TestCase):
                          self.NO_OUTPUT,
                          "Command must failed when executed")
         self.assertEqual(fake_out .get("err"),
-                         'ls: filename.txt: No such file or directory\n',
+                         'create: filename.txt: No such file or directory\n',
                          "Command must failed when executed")
 
         self.assertIn("test_agent.py",
@@ -359,6 +359,7 @@ class TestAgent(TestCase):
                          self.NO_OUTPUT,
                          "Command succeed when executed")
 
+    # ------------------------------------------------------------------------------
 
     def test_should_be_able_to_process_a_command(self):
         """ Tests the complete process of execution a user command
@@ -380,5 +381,7 @@ class TestAgent(TestCase):
                          self.SUCCESS_CODE,
                          "Command must failed when executed")
 
+        # ------------------------------------------------------------------------------
 
+    def test_logan_executes_action_command_entered_by_user(self): pass
 

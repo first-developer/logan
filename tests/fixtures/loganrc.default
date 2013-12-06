@@ -11,6 +11,6 @@ actions:
   "create:file":
     scope: create
     context: null
-    path: /bin/ls
+    path: ls
 
 ... # EOF
