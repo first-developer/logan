@@ -26,37 +26,59 @@
       <file leaf-file-name="agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logan/agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="509" column="0" selection-start="16425" selection-end="16425" vertical-scroll-proportion="0.0" vertical-offset="7635" max-vertical-offset="8550">
+            <state line="509" column="0" selection-start="16425" selection-end="16425" vertical-scroll-proportion="0.0" vertical-offset="6420" max-vertical-offset="8460">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logan/main.py">
+      <file leaf-file-name="cli.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/logan/cli.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="240">
+            <state line="84" column="60" selection-start="2689" selection-end="2689" vertical-scroll-proportion="0.052419353" vertical-offset="1221" max-vertical-offset="1965">
+              <folding>
+                <element signature="e#256#290#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logan/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logan/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="4" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.89772725" vertical-offset="305" max-vertical-offset="1200">
-              <folding />
+            <state line="49" column="4" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.0" vertical-offset="309" max-vertical-offset="825">
+              <folding>
+                <element signature="e#1488#1511#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exceptions.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logan/exceptions.py">
+      <file leaf-file-name="test_logan.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/logan/test_logan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="308" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="270">
+            <state line="15" column="36" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
               <folding>
-                <marker date="1384993318000" expanded="true" signature="350:355" placeholder="..." />
+                <element signature="e#2#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loganrc.default" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/loganrc.default">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="16" selection-start="526" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="555">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,7 +86,7 @@
       <file leaf-file-name="test_agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="350" column="0" selection-start="14588" selection-end="14588" vertical-scroll-proportion="0.0" vertical-offset="5250" max-vertical-offset="5895">
+            <state line="44" column="4" selection-start="1554" selection-end="1634" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="5835">
               <folding />
             </state>
           </provider>
@@ -80,10 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/logan/agent_test.py" />
-        <option value="$PROJECT_DIR$/logan/test_agent.py" />
-        <option value="$PROJECT_DIR$/tests/fixtures/loganrc.default.json" />
-        <option value="$PROJECT_DIR$/tests/fixtures/loganrc.default.yml" />
         <option value="$PROJECT_DIR$/tests/logan/test_action.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/logan/action.py" />
@@ -95,7 +113,11 @@
         <option value="$PROJECT_DIR$/src/loganrc.default" />
         <option value="$PROJECT_DIR$/tests/fixtures/loganrc" />
         <option value="$PROJECT_DIR$/tests/logan/test_agent.py" />
+        <option value="$APPLICATION_HOME_DIR$/helpers/pycharm/tcunittest.py" />
         <option value="$PROJECT_DIR$/logan/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/logan/test_logan.py" />
+        <option value="$PROJECT_DIR$/logan/utils.py" />
+        <option value="$PROJECT_DIR$/logan/cli.py" />
       </list>
     </option>
   </component>
@@ -178,7 +200,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fixtures" />
+              <option name="myItemId" value="logan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -192,55 +214,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fixtures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fixtures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="usr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="logs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -272,26 +246,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="usr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="options.lastSelected" value="preferences.updates" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/logan" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <PyConsoleSettings>
+      <console-settings module-name="logan" is-module-sdk="true">
         <option name="myUseModuleSdk" value="true" />
         <option name="myModuleName" value="logan" />
-      </PyConsoleSettings>
+      </console-settings>
     </option>
   </component>
   <component name="RecentsManager">
@@ -302,13 +308,14 @@
       <recent name="D:\Utilisateurs\A555983\Playground\logan\tests\fixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tests/fixtures/actions/usr" />
       <recent name="$PROJECT_DIR$/src/actions/usr" />
       <recent name="D:\Utilisateurs\A555983\Playground\logan\lib" />
       <recent name="D:\Utilisateurs\A555983\Playground\logan" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.TestAgent">
+  <component name="RunManager" selected="Python tests.Unittests in TestLogan">
     <configuration default="false" name="agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -323,32 +330,6 @@
       <module name="logan" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/logan/agent.py" />
       <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest TestAgent.test_shouldRaiseWhenTheDefaultConfigFileDoesntExist" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="C:/Python27/python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/logan" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="logan" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/logan/test_agent.py" />
-      <option name="CLASS_NAME" value="TestAgent" />
-      <option name="METHOD_NAME" value="test_shouldRaiseWhenTheDefaultConfigFileDoesntExist" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -420,6 +401,32 @@
       <option name="METHOD_NAME" value="test_shouldReturnsUserConfiguration" />
       <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in TestLogan" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="C:/Python27/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/logan" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="logan" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/logan/test_logan.py" />
+      <option name="CLASS_NAME" value="TestLogan" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -608,18 +615,18 @@
       <item index="0" class="java.lang.String" itemvalue="Python tests.TestAgent" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.TestAction" />
       <item index="2" class="java.lang.String" itemvalue="Python.agent" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldRaiseWhenTheDefaultConfigFileDoesntExist" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldreturnDefaultConfigurationWhenRequested" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldRaiseWhenTheConfigFileIsNotWellFormatted" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldReturnsUserConfiguration" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldreturnDefaultConfigurationWhenRequested" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldRaiseWhenTheConfigFileIsNotWellFormatted" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldReturnsUserConfiguration" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests in TestLogan" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldReturnsUserConfiguration" />
-        <item index="1" class="java.lang.String" itemvalue="Python.agent" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldRaiseWhenTheConfigFileIsNotWellFormatted" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldreturnDefaultConfigurationWhenRequested" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldRaiseWhenTheDefaultConfigFileDoesntExist" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestLogan" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldReturnsUserConfiguration" />
+        <item index="2" class="java.lang.String" itemvalue="Python.agent" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldRaiseWhenTheConfigFileIsNotWellFormatted" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestAgent.test_shouldreturnDefaultConfigurationWhenRequested" />
       </list>
     </recent_temporary>
   </component>
@@ -676,13 +683,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22734499" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22687225" sideWeight="0.49969825" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12854557" sideWeight="0.7720264" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22797357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16945107" sideWeight="0.77492875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22792023" sideWeight="0.49960223" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42658094" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3608903" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16989248" sideWeight="0.5003018" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16989248" sideWeight="0.49909475" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -694,21 +701,21 @@
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39813375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22687225" sideWeight="0.49969825" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22797357" sideWeight="0.49969825" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22507122" sideWeight="0.5003978" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12421875" sideWeight="0.6718507" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16945107" sideWeight="0.77492875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3281493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22507122" sideWeight="0.49960223" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -724,68 +731,13 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="103" />
+      <option name="time" value="112" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="78" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logan/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logan/agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logan/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="699" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1487" column="32" selection-start="59283" selection-end="59283" vertical-scroll-proportion="0.0" vertical-offset="21062" max-vertical-offset="21570" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logan/exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="308" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding>
-            <marker date="1384993318000" expanded="true" signature="350:355" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/fixtures/loganrc_bad.default">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="20" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/loganrc.default">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="555" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/fixtures/loganrc.default">
@@ -798,9 +750,56 @@
         <state line="13" column="16" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logan/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="34" selection-start="308" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="330" column="0" selection-start="10953" selection-end="10953" vertical-scroll-proportion="0.0" vertical-offset="4531" max-vertical-offset="16035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/tcunittest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="0" selection-start="2820" selection-end="2820" vertical-scroll-proportion="0.0" vertical-offset="1186" max-vertical-offset="3075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="0" selection-start="4896" selection-end="4896" vertical-scroll-proportion="0.0" vertical-offset="1966" max-vertical-offset="2880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logan.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="350" column="0" selection-start="14588" selection-end="14588" vertical-scroll-proportion="0.0" vertical-offset="5269" max-vertical-offset="5835">
+        <state line="44" column="4" selection-start="1554" selection-end="1634" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/loganrc.default">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="16" selection-start="526" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
@@ -812,17 +811,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logan/main.py">
+    <entry file="file://$PROJECT_DIR$/tests/logan/test_logan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
+        <state line="15" column="36" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding>
+            <element signature="e#2#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logan/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="4" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.89772725" vertical-offset="305" max-vertical-offset="1200">
+        <state line="49" column="4" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="825">
+          <folding>
+            <element signature="e#1488#1511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logan/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logan/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="60" selection-start="2689" selection-end="2689" vertical-scroll-proportion="0.052419353" vertical-offset="1221" max-vertical-offset="1965">
+          <folding>
+            <element signature="e#256#290#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
