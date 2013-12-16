@@ -1,7 +1,8 @@
 from unittest import TestCase
 from logan import Agent
-from logan import LoganConfigFileNotExistsError
-from logan import LoganLoadConfigError
+from logan import LoganConfigFileNotExistsError,\
+                  LoganFileNotExistsError,\
+                  LoganLoadFileError
 import os.path
 
 
@@ -80,7 +81,7 @@ class TestAgent(TestCase):
         """ Loads default config file path  and return a config object """
         self.agent = Agent()
 
-        self.failUnlessRaises(LoganConfigFileNotExistsError, self.agent.load_default_config)
+        self.failUnlessRaises(LoganFileNotExistsError, self.agent.load_default_config)
 
     # ------------------------------------------------------------------------------
 
@@ -93,7 +94,7 @@ class TestAgent(TestCase):
         # Change the default config file path with the bad one
         self.agent.default_config_file_path = self.BAD_DEFAULT_CONFIG_FILEPATH
 
-        self.failUnlessRaises(LoganLoadConfigError, self.agent.load_default_config)
+        self.failUnlessRaises(LoganLoadFileError, self.agent.load_default_config)
 
     # ------------------------------------------------------------------------------
 

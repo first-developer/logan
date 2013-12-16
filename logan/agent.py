@@ -2,7 +2,8 @@
 #    LOGAN AGENT
 # ==========================================================
 
-from os import  path
+from os import path
+from utils import dict_merge, load_file, FileTypes
 import shelve
 from exceptions import  LoganConfigFileNotExistsError, \
                         LoganLoadConfigError, \
@@ -109,36 +110,9 @@ class Agent(object):
 
     def get_config_from_filepath(self, file_path):
         """ Loads config python Dict from a given file_path
-
-
-            Raises:
-                LoganLoadConfigError:           Error occurred  when it
-                                                fails to read from the file
-                LoganConfigFileNotExistsError:  Error occurred when the file
-                                                linked to the given file path
-                                                doesn't exist
         """
 
-        from os     import path
-        from yaml   import load
-        from yaml   import YAMLError
-
-        config = None
-
-        # Check if the file exist before trying to read it
-        if path.exists(file_path):
-            with open(file_path) as config_file:
-                config_content = config_file.read()
-                try:
-                    config = load(config_content)
-                except YAMLError as e:
-                    raise LoganLoadConfigError("Agent.get_default_config() : Logan was not able to load config from default config file")
-
-                config_file.close()
-
-            return config
-        else:
-            raise LoganConfigFileNotExistsError("Agent.get_default_config() : Logan was not able to open the default config file")
+        return load_file(file_path, type=FileTypes.YAML)
 
     # ------------------------------------------------------------------------------
 
@@ -187,7 +161,7 @@ class Agent(object):
             user_config    = self.load_user_config()
 
             # Overrides the default config with user one
-            config = self.dict_merge(default_config, user_config) or {}
+            config = dict_merge(default_config, user_config) or {}
 
             # Save the config to the cache
             cached = self.add_to_cache(config)
@@ -196,30 +170,6 @@ class Agent(object):
                 print "Failed to cache config file"
 
         return config
-
-    # ------------------------------------------------------------------------------
-
-    def dict_merge(self, a, b):
-        """
-        @author: Ross McFarland
-        @refernce: http://www.xormedia.com/recursively-merge-dictionaries-in-python/
-
-        Recursively merges dict's. not just simple a['key'] = b['key'], if
-        both a and bhave a key who's value is a dict then dict_merge is called
-        on both values and the result stored in the returned dictionary.
-        """
-
-        from copy import deepcopy
-
-        if not isinstance(b, dict):
-            return b
-        result = deepcopy(a)
-        for k, v in b.iteritems():
-            if k in result and isinstance(result[k], dict):
-                    result[k] = self.dict_merge(result[k], v)
-            else:
-                result[k] = deepcopy(v)
-        return result
 
     # ------------------------------------------------------------------------------
 
@@ -485,7 +435,7 @@ class Agent(object):
 
     # ------------------------------------------------------------------------------
 
-    # TODO: write test for this method
+    # TODO: Write test for this method
     def build_command_from_action(self, action):
         """ Build the process command that will be executed.
 
@@ -558,7 +508,3 @@ class Agent(object):
         else:
             # TODO: Writes 'Show_help' method
             print "Wrong syntax : Unable to run the command"
-            pass
-
-
-

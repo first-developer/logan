@@ -26,28 +26,32 @@
       <file leaf-file-name="agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logan/agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="509" column="0" selection-start="16425" selection-end="16425" vertical-scroll-proportion="0.0" vertical-offset="6420" max-vertical-offset="8460">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cli.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/logan/cli.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="60" selection-start="2689" selection-end="2689" vertical-scroll-proportion="0.052419353" vertical-offset="1221" max-vertical-offset="1965">
+            <state line="124" column="0" selection-start="3953" selection-end="3953" vertical-scroll-proportion="0.0" vertical-offset="1624" max-vertical-offset="7725">
               <folding>
-                <element signature="e#256#290#0" expanded="true" />
+                <element signature="e#140#159#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cli.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logan/cli.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="7" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.0" vertical-offset="636" max-vertical-offset="1875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logan/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <folding />
+            <state line="83" column="37" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.32853404" vertical-offset="499" max-vertical-offset="1905">
+              <folding>
+                <element signature="e#248#339#0" expanded="true" />
+                <element signature="e#714#1364#0" expanded="false" />
+                <element signature="e#1486#1790#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,10 +59,17 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logan/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="4" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.0" vertical-offset="309" max-vertical-offset="825">
-              <folding>
-                <element signature="e#1488#1511#0" expanded="true" />
-              </folding>
+            <state line="43" column="29" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exceptions.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logan/exceptions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="49" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,10 +77,8 @@
       <file leaf-file-name="test_logan.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/logan/test_logan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="36" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <folding>
-                <element signature="e#2#31#0" expanded="true" />
-              </folding>
+            <state line="15" column="18" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,8 +95,10 @@
       <file leaf-file-name="test_agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="4" selection-start="1554" selection-end="1634" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="5835">
-              <folding />
+            <state line="83" column="35" selection-start="3100" selection-end="3100" vertical-scroll-proportion="0.0" vertical-offset="949" max-vertical-offset="5910">
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,27 +116,27 @@
         <option value="$PROJECT_DIR$/tests/logan/test_action.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/logan/action.py" />
-        <option value="$PROJECT_DIR$/logan/exceptions.py" />
-        <option value="$PROJECT_DIR$/logan/agent.py" />
         <option value="$PROJECT_DIR$/tests/fixtures/loganrc.default" />
         <option value="$PROJECT_DIR$/logan/__main__.py" />
         <option value="$PROJECT_DIR$/logan/main.py" />
         <option value="$PROJECT_DIR$/src/loganrc.default" />
         <option value="$PROJECT_DIR$/tests/fixtures/loganrc" />
-        <option value="$PROJECT_DIR$/tests/logan/test_agent.py" />
         <option value="$APPLICATION_HOME_DIR$/helpers/pycharm/tcunittest.py" />
-        <option value="$PROJECT_DIR$/logan/__init__.py" />
-        <option value="$PROJECT_DIR$/tests/logan/test_logan.py" />
-        <option value="$PROJECT_DIR$/logan/utils.py" />
         <option value="$PROJECT_DIR$/logan/cli.py" />
+        <option value="$PROJECT_DIR$/tests/logan/test_logan.py" />
+        <option value="$PROJECT_DIR$/logan/exceptions.py" />
+        <option value="$PROJECT_DIR$/logan/agent.py" />
+        <option value="$PROJECT_DIR$/logan/utils.py" />
+        <option value="$PROJECT_DIR$/logan/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/logan/test_agent.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1680" />
-    <option name="y" value="-228" />
+    <option name="y" value="-250" />
     <option name="width" value="1680" />
-    <option name="height" value="1028" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -284,13 +295,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.updates" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.lastSelected" value="preferences.updates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/logan" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -315,7 +326,7 @@
       <recent name="D:\Utilisateurs\A555983\Playground\logan" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in TestLogan">
+  <component name="RunManager" selected="Python tests.TestAgent">
     <configuration default="false" name="agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -677,23 +688,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1680" y="-228" width="1680" height="1028" extended-state="6" />
+    <frame x="-1680" y="-250" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22687225" sideWeight="0.49969825" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16945107" sideWeight="0.77492875" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22792023" sideWeight="0.49960223" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.8301075" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.114665054" sideWeight="0.8319328" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22689076" sideWeight="0.49909475" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16989248" sideWeight="0.5003018" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16989248" sideWeight="0.49909475" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16806723" sideWeight="0.5009053" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16806723" sideWeight="0.49909475" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22687225" sideWeight="0.49969825" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -713,9 +724,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16945107" sideWeight="0.77492875" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22507122" sideWeight="0.49960223" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -728,10 +739,42 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/logan/utils.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/logan/agent.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/logan/agent.py</url>
+          <line>106</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/logan/agent.py</url>
+          <line>122</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/logan/agent.py</url>
+          <line>124</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/logan/agent.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="112" />
+      <option name="time" value="125" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -755,46 +798,24 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logan/exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="308" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="330" column="0" selection-start="10953" selection-end="10953" vertical-scroll-proportion="0.0" vertical-offset="4531" max-vertical-offset="16035">
-          <folding />
-        </state>
+        <state line="330" column="0" selection-start="10953" selection-end="10953" vertical-scroll-proportion="0.0" vertical-offset="4531" max-vertical-offset="16035" />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/tcunittest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="2820" selection-end="2820" vertical-scroll-proportion="0.0" vertical-offset="1186" max-vertical-offset="3075">
-          <folding />
-        </state>
+        <state line="98" column="0" selection-start="2820" selection-end="2820" vertical-scroll-proportion="0.0" vertical-offset="1186" max-vertical-offset="3075" />
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="0" selection-start="4896" selection-end="4896" vertical-scroll-proportion="0.0" vertical-offset="1966" max-vertical-offset="2880">
-          <folding />
-        </state>
+        <state line="153" column="0" selection-start="4896" selection-end="4896" vertical-scroll-proportion="0.0" vertical-offset="1966" max-vertical-offset="2880" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/logan.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="4" selection-start="1554" selection-end="1634" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5895">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/loganrc.default">
@@ -804,43 +825,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logan/agent.py">
+    <entry file="file://$PROJECT_DIR$/logan/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="509" column="0" selection-start="16425" selection-end="16425" vertical-scroll-proportion="0.0" vertical-offset="7422" max-vertical-offset="8460">
+        <state line="7" column="49" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/logan/test_logan.py">
+    <entry file="file://$PROJECT_DIR$/logan/agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+        <state line="124" column="0" selection-start="3953" selection-end="3953" vertical-scroll-proportion="0.0" vertical-offset="1624" max-vertical-offset="7725">
           <folding>
-            <element signature="e#2#31#0" expanded="true" />
+            <element signature="e#140#159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logan/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="825">
-          <folding>
-            <element signature="e#1488#1511#0" expanded="true" />
-          </folding>
+        <state line="43" column="29" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="855">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logan/utils.py">
+    <entry file="file://$PROJECT_DIR$/tests/logan/test_logan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+        <state line="15" column="18" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/logan/test_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="35" selection-start="3100" selection-end="3100" vertical-scroll-proportion="0.0" vertical-offset="949" max-vertical-offset="5910">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logan/cli.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="60" selection-start="2689" selection-end="2689" vertical-scroll-proportion="0.052419353" vertical-offset="1221" max-vertical-offset="1965">
+        <state line="56" column="7" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logan/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="37" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.32853404" vertical-offset="499" max-vertical-offset="1905">
           <folding>
-            <element signature="e#256#290#0" expanded="true" />
+            <element signature="e#248#339#0" expanded="true" />
+            <element signature="e#714#1364#0" expanded="false" />
+            <element signature="e#1486#1790#0" expanded="false" />
           </folding>
         </state>
       </provider>

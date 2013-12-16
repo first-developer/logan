@@ -40,6 +40,8 @@ __usage__="""Logan: Command line organizer
 from agent import Agent
 from exceptions import  LoganConfigFileNotExistsError, \
                         LoganLoadConfigError,\
+                        LoganLoadFileError,\
+                        LoganFileNotExistsError,\
                         LoganActionPathMissingError
 from cli import run
 
